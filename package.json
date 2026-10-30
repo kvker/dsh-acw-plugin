@@ -1,0 +1,56 @@
+{
+  "name": "dsh-acw-plugin",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness plugin: turn a picked workspace into an AI Context Workspace (ACW) layout and offer $an-init on the first turn.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "ai-context-workspace",
+    "acw",
+    "workspace",
+    "agent"
+  ],
+  "author": "kvker",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kvker/dsh-acw-plugin.git"
+  },
+  "homepage": "https://github.com/kvker/dsh-acw-plugin#readme",
+  "bugs": {
+    "url": "https://github.com/kvker/dsh-acw-plugin/issues"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.5"
+  }
+}

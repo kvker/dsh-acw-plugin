@@ -1,0 +1,12 @@
+# 本 bundle 的 Loader 层：把插件行插入 profile 的组合树。
+#
+# 需要改默认值时，不要改这里；在 profile 的 cordis.patch.yml 里写同 id 的
+# 条目覆盖即可，例如：
+#
+#   - id: ai-context-workspace
+#     config:
+#       suffix: '.acw'
+#       templateCacheDir: /Users/you/.acw-template
+- insert:
+    - id: ai-context-workspace
+      name: 'dsh-acw-plugin'
