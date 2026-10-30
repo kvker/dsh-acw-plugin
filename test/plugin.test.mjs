@@ -35,8 +35,7 @@ async function harness(config = {}, existing = [], agents = []) {
       warn: (message) => messages.push(`warn ${message}`),
     },
     workspaceRegistry: registry,
-    agents: { list: () => agents },
-    get: () => ({ list: () => [] }),
+    get: (name) => (name === 'agents' ? { list: () => agents } : { list: () => [] }),
     on: (name, handler) => {
       listeners.set(name, handler)
     },
