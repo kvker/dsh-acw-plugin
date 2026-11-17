@@ -22,4 +22,4 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - name: Run unit tests
-        run: node --test test/
+        run: node --test
