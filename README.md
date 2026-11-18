@@ -3,6 +3,7 @@ Chinese | [English](README.en.md)
 # dsh-acw-plugin
 
 [![CI](https://github.com/kvker/dsh-acw-plugin/actions/workflows/ci.yml/badge.svg)](https://github.com/kvker/dsh-acw-plugin/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/dsh-acw-plugin.svg)](https://www.npmjs.com/package/dsh-acw-plugin)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 把 DeepSeek Harness 的「添加工作区」一键变成 [AI Context Workspace（ACW）](https://github.com/kvker/ai-context-workspace)，
@@ -39,13 +40,14 @@ Chinese | [English](README.en.md)
 需要 DeepSeek Harness 桌面端（自带 `dsh` CLI）。
 
 ```sh
-# 从 GitHub 安装
-dsh plugin --profile desktop add git+https://github.com/kvker/dsh-acw-plugin.git
-# 等价写法
+# 从 npm 安装（推荐）
+dsh plugin --profile desktop add dsh-acw-plugin
+
+# 或直接用 GitHub 源码（最新提交，无需等待发版）
 dsh plugin --profile desktop add github:kvker/dsh-acw-plugin
 
-# 或从本地目录（开发时用，pnpm 会建 link）
-dsh plugin --profile desktop add ~/Documents/deepseek-harness/plugins/dsh-acw-plugin
+# web profile 同样可用
+dsh plugin --profile web add dsh-acw-plugin
 ```
 
 本包声明了 `dsh.bundle.patch`，CLI 会把它作为 bundle 层追加到 profile 并启用。

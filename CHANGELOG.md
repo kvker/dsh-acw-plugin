@@ -21,3 +21,4 @@ All notable changes to this project are documented here. The format follows
 - Safety rules: existing target, session history, protected paths, ACW nesting, and rollback on failure.
 - Diagnostics at `~/.dsh/ai-context-workspace/last-run.json`.
 - Unit tests and GitHub Actions CI.
+- Published to npm as `dsh-acw-plugin`.

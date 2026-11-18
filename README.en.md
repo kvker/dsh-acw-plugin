@@ -3,6 +3,7 @@
 # dsh-acw-plugin
 
 [![CI](https://github.com/kvker/dsh-acw-plugin/actions/workflows/ci.yml/badge.svg)](https://github.com/kvker/dsh-acw-plugin/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/dsh-acw-plugin.svg)](https://www.npmjs.com/package/dsh-acw-plugin)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 A [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) host plugin that turns the directory you pick in
@@ -40,13 +41,14 @@ plugin asks the model to use `ask_user_question` once: "Initialize the workspace
 Requires the DeepSeek Harness desktop app (which ships the `dsh` CLI).
 
 ```sh
-# from GitHub
-dsh plugin --profile desktop add git+https://github.com/kvker/dsh-acw-plugin.git
-# equivalent
+# from npm (recommended)
+dsh plugin --profile desktop add dsh-acw-plugin
+
+# or straight from GitHub (newest commit, no release wait)
 dsh plugin --profile desktop add github:kvker/dsh-acw-plugin
 
-# or from a local checkout (pnpm links it)
-dsh plugin --profile desktop add ~/Documents/deepseek-harness/plugins/dsh-acw-plugin
+# the web profile works too
+dsh plugin --profile web add dsh-acw-plugin
 ```
 
 The package declares `dsh.bundle.patch`, so the CLI adds it as a bundle layer and enables it. Config hot reload is on by
