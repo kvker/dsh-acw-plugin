@@ -41,6 +41,8 @@ Chinese | [English](README.en.md)
 ```sh
 # 从 GitHub 安装
 dsh plugin --profile desktop add git+https://github.com/kvker/dsh-acw-plugin.git
+# 等价写法
+dsh plugin --profile desktop add github:kvker/dsh-acw-plugin
 
 # 或从本地目录（开发时用，pnpm 会建 link）
 dsh plugin --profile desktop add ~/Documents/deepseek-harness/plugins/dsh-acw-plugin
